@@ -1,0 +1,8 @@
+{
+  "name": "Clinica Gabriella Rito - Harmonização Facial",
+  "description": "Gabriella Rito Harmonização Facial em São Paulo. Visão estética com inteligência de futuro. Atendimento personalizado por agendamento.",
+  "requestFramePermissions": [],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}

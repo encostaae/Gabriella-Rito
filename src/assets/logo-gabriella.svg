@@ -1,0 +1,46 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 600" width="100%" height="100%">
+  <defs>
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600&amp;family=Plus+Jakarta+Sans:wght@300;400;500&amp;display=swap');
+      .logo-monogram {
+        font-family: 'Cormorant Garamond', Georgia, serif;
+        font-size: 210px;
+        font-weight: 400;
+        letter-spacing: -2px;
+        fill: #78614E;
+        text-anchor: middle;
+        dominant-baseline: central;
+      }
+      .logo-brandname {
+        font-family: 'Cormorant Garamond', Georgia, serif;
+        font-size: 34px;
+        font-weight: 400;
+        letter-spacing: 10px;
+        text-transform: uppercase;
+        fill: #78614E;
+        text-anchor: middle;
+      }
+      .logo-subtitle {
+        font-family: 'Plus Jakarta Sans', system-ui, sans-serif;
+        font-size: 19px;
+        font-weight: 300;
+        letter-spacing: 12px;
+        text-transform: uppercase;
+        fill: #8E7764;
+        text-anchor: middle;
+      }
+    </style>
+  </defs>
+
+  <!-- Centered Content -->
+  <g transform="translate(300, 300)">
+    <!-- Monogram GR -->
+    <text class="logo-monogram" x="0" y="-45">GR</text>
+    
+    <!-- GABRIELLA RITO -->
+    <text class="logo-brandname" x="5" y="85">GABRIELLA RITO</text>
+    
+    <!-- CLÍNICA -->
+    <text class="logo-subtitle" x="6" y="128">CLÍNICA</text>
+  </g>
+</svg>

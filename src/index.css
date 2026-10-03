@@ -1,0 +1,84 @@
+@import "tailwindcss";
+
+:root {
+  --background: #D8C7B5;
+  --surface: #332C28;
+  --surface-light: #EFE7DE;
+  --surface-card: #2B2521;
+  --marrom: #8A7768;
+  --marrom-dark: #6E5D4F;
+  --marrom-light: #A38F7F;
+  --areia: #E9DED2;
+  --text: #F7F4EF;
+  --text-dark: #2C2522;
+  --text-secondary: #7A6A5E;
+  --border: rgba(138, 119, 104, 0.25);
+  --border-light: rgba(247, 244, 239, 0.15);
+  --gold-accent: #C5A880;
+}
+
+@theme {
+  --font-serif: 'Cormorant Garamond', Georgia, serif;
+  --font-sans: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+  --color-nude: #D8C7B5;
+  --color-nude-light: #EFE7DE;
+  --color-nude-soft: #F4ECE4;
+  --color-nude-dark: #C6B3A0;
+  --color-marrom: #8A7768;
+  --color-marrom-dark: #5C4E43;
+  --color-marrom-light: #A38F7F;
+  --color-surface-dark: #241E1B;
+  --color-surface-card: #322B27;
+  --color-areia: #E9DED2;
+  --color-offwhite: #F7F4EF;
+  --color-espresso: #1A1513;
+  --color-gold: #C5A880;
+}
+
+html {
+  scroll-behavior: smooth;
+  -webkit-tap-highlight-color: transparent;
+}
+
+body {
+  font-family: var(--font-sans);
+  background-color: var(--background);
+  color: #2C2522;
+  overflow-x: hidden;
+}
+
+.font-serif {
+  font-family: var(--font-serif);
+}
+
+.font-sans {
+  font-family: var(--font-sans);
+}
+
+/* Glassmorphism subtle styles */
+.glass-nav {
+  background: rgba(216, 199, 181, 0.88);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+}
+
+.glass-card {
+  background: rgba(239, 231, 222, 0.7);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+}
+
+.glass-dark {
+  background: rgba(42, 36, 33, 0.92);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+}
+
+/* Hide scrollbars for clean horizontal tab lists */
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
