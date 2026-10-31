@@ -41,7 +41,7 @@ export const InstagramSection: React.FC = () => {
 
         {/* Gallery Grid with Real Photos & Posts */}
         <div className="grid grid-cols-2 md:grid-cols-4 gap-4 sm:gap-6">
-          {galleryItems.map((item) => (
+          {galleryItems.map((item, index) => (
             <a
               key={item.id}
               href={businessInfo.instagramUrl}
@@ -52,8 +52,17 @@ export const InstagramSection: React.FC = () => {
               <img
                 src={item.imageUrl}
                 alt={item.title}
+                loading="lazy"
+                decoding="async"
                 className="w-full h-full object-cover transition-transform duration-700 ease-out group-hover:scale-105 brightness-[0.98] contrast-[1.03]"
                 referrerPolicy="no-referrer"
+                onError={(e) => {
+                  const target = e.currentTarget;
+                  const fallback = `/images/instagram/insta_${index + 1}.jpg`;
+                  if (!target.src.includes(`insta_${index + 1}.jpg`)) {
+                    target.src = fallback;
+                  }
+                }}
               />
 
               {/* Category Tag pill-free on bottom or hover */}

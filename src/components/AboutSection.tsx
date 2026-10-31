@@ -13,20 +13,26 @@ export const AboutSection: React.FC<AboutSectionProps> = ({ onScheduleClick }) =
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center">
           {/* Editorial Image Column with Real Clinic Photography */}
-          <div className="lg:col-span-6 relative">
-            <div className="relative rounded-3xl overflow-hidden shadow-[0_20px_50px_rgba(44,37,34,0.18)] border border-[#8A7768]/30">
+          <div className="lg:col-span-6 relative flex justify-center">
+            <div className="relative w-full max-w-sm sm:max-w-md lg:max-w-[460px] aspect-[2/3] rounded-3xl overflow-hidden shadow-[0_20px_50px_rgba(44,37,34,0.18)] border border-[#8A7768]/30 bg-[#2A2421]/10">
               <img
-                src="https://i.postimg.cc/Bvh86Vd1/642038499-18562936447034323-8346439626662011021-n.jpg"
+                src="https://i.postimg.cc/RCTbJ562/Whats-App-Image-2026-10-27-at-14-24-33-(1).jpg"
                 alt="Dra. Gabriella Rito - Harmonização Facial e atendimento exclusivo em São Paulo"
                 loading="lazy"
                 decoding="async"
-                className="w-full h-[420px] sm:h-[520px] object-cover object-top brightness-[0.98] contrast-[1.04]"
+                className="w-full h-full object-cover object-center brightness-[0.98] contrast-[1.04]"
                 referrerPolicy="no-referrer"
+                onError={(e) => {
+                  const target = e.currentTarget;
+                  if (!target.src.includes('dra_gabriella_sobre.jpg')) {
+                    target.src = '/images/real/dra_gabriella_sobre.jpg';
+                  }
+                }}
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-[#2A2421]/65 via-transparent to-transparent" />
+              <div className="absolute inset-0 bg-gradient-to-t from-[#2A2421]/60 via-transparent to-transparent pointer-events-none" />
 
               {/* Floating Quote Stamp with Original Monogram */}
-              <div className="absolute bottom-6 left-6 right-6 p-4 rounded-2xl bg-[#EFE7DE]/95 backdrop-blur-md border border-[#8A7768]/20 shadow-md flex items-center gap-3.5">
+              <div className="absolute bottom-5 left-5 right-5 p-3.5 sm:p-4 rounded-2xl bg-[#EFE7DE]/95 backdrop-blur-md border border-[#8A7768]/20 shadow-md flex items-center gap-3.5">
                 <div className="w-10 h-10 rounded-full bg-[#D8C7B5] border border-[#8A7768]/30 flex items-center justify-center shrink-0">
                   <ClinicLogo variant="monogram" theme="taupe" size="sm" />
                 </div>
@@ -37,7 +43,7 @@ export const AboutSection: React.FC<AboutSectionProps> = ({ onScheduleClick }) =
             </div>
 
             {/* Subtle decorative offset border */}
-            <div className="hidden sm:block absolute -bottom-4 -right-4 w-full h-full border border-[#8A7768]/25 rounded-3xl -z-10 pointer-events-none" />
+            <div className="hidden sm:block absolute top-3 left-1/2 -translate-x-1/2 w-full max-w-sm sm:max-w-md lg:max-w-[460px] aspect-[2/3] border border-[#8A7768]/25 rounded-3xl -z-10 pointer-events-none translate-x-3 translate-y-3" />
           </div>
 
           {/* Copy Column */}
